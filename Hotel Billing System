@@ -1,0 +1,50 @@
+# Hotel Billing System
+def select_item(item):
+    print(f"Your choice is {item}.")
+# Define food items
+p = 'Pizza'
+sp = 20
+b = 'Burger'
+sb = 50
+cd = 'Cool Drinks'
+scd = 30
+# Run the selection loop
+is_running = True
+
+while is_running:
+
+    print("\nSelect Food Items from the below Categories:")
+    print('**********************************************')
+    print("1. Pizza")
+    print("2. Burger")
+    print("3. Cool Drinks")
+    print("4. Exit")
+
+    choice = input("\nEnter your choice (1-4): ")
+
+    if choice == '1':
+        select_item(p)
+        Cost = sp
+        break
+    elif choice == '2':
+        select_item(b)
+        Cost = sb
+        break
+    elif choice == '3':
+        select_item(cd)
+        Cost = scd
+        break
+    elif choice == '4':
+        is_running = False
+    else:
+        print('**********************************************')
+        print("That was an invalid selection. Please choose a valid option.")
+        print('**********************************************')
+
+Qty = int(input("Enter the Qty: "))
+
+Sum = Qty * Cost
+print('****************************')
+print(f"Amount to be paid for:{Sum} ")
+print('****************************')
+print("\nThanks for visiting Bhavya Hotel!")
