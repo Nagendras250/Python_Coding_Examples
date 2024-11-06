@@ -1,0 +1,66 @@
+# Python Banking program
+-------------------------------------------------------
+def Account_Balance():
+    print(f"Your balance is: 'Rs. {Balance:.2f}'")
+def WithDraw():
+    amount = float(input("Enter the amount to be withdrawn:"))
+    if amount > Balance:
+        print("Insufficient Funds")
+        return 0
+    elif amount < 0:
+        print("Enter a valid Amount")
+        return 0
+    else:
+        return amount
+def Cash_Deposit():
+    amount = float(input("Enter the amount to be deposited:"))
+    if amount < 0:
+        print("Please Enter Valid amount > 0.")
+        return 0
+    else:
+        return amount
+def Fixed_Deposit():
+    pass
+def Invest():
+    pass
+def Loan():
+    pass
+def profile():
+    pass
+
+Balance = 0
+is_running = True
+
+while is_running:
+    print("Welcome to Bhavya Bank")
+    print("1. Account Balance")
+    print("2. WithDraw")
+    print("3. Cash Deposit")
+    print("4. Fixed Deposit")
+    print("5. Invest")
+    print("6. Loan")
+    print("7. Profile")
+    print("8. Exit")
+
+    Choice = input("Enter your choice (1-8): ")
+
+    if Choice == '1':
+        Account_Balance()
+    elif Choice == '2':
+        Balance -= WithDraw()
+    elif Choice == '3':
+        Balance += Cash_Deposit()
+    elif Choice == '4':
+        Fixed_Deposit()
+    elif Choice == '5':
+        Invest()
+    elif Choice == '6':
+        Loan()
+    elif Choice == '7':
+        profile()
+    elif Choice == '8':
+        is_running = False
+    else:
+        print("That is invalid Choice.")
+
+print("Thanks for Visiting us. Have a Great Day!")
