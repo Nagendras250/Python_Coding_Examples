@@ -1,0 +1,10 @@
+# Weight convertor:
+
+Weight = float(input("Weight:"))
+measure = input("(K)g or (L)bs:")
+if measure == 'l' or measure == 'L':
+    print(Weight * 2.2046 )
+elif measure == 'K' or measure == 'k':
+    print(Weight)
+else:
+    print("Enter right measure either K or L only")
